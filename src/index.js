@@ -10,15 +10,15 @@ axios.defaults.headers.common['Autrhorization'] = 'AUTH TOKEN';
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 axios.interceptors.request.use(request => {
-    console.log(request);
+    //console.log(request);
     return request;
 }, error => {
-    console.log('[request-interceptor] '+error);
+    //console.log('[request-interceptor] '+error);
     return Promise.reject(error);
 });
 
 axios.interceptors.response.use(request => {
-    console.log(request);
+    //console.log(request);
     return request;
 }, error => {
     console.log('[response-interceptor] '+error);
